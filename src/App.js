@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./Components/Login";
+import Signup from "./Components/User/Signup";
+
+import axios from "axios";
+import Dashboard from "./Components/User/Dashboard";
+
+// Set up the CSRF token in Axios headers globally
+// const csrfToken = document
+//   .querySelector('meta[name="csrf-token"]')
+//   .getAttribute("content");
+// axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
+// axios.defaults.withCredentials = true;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
