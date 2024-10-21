@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import authService from "../../Services/authService";
+import { register } from "../../Services/authService";
 import { useEffect, useState } from "react";
 import SuccessPopup from "../Common/SuccessPopup";
 
@@ -55,7 +55,7 @@ function Signup() {
     }
 
     try {
-      const response = await authService.signup({
+      const response = await register({
         firstname: formData.firstname,
         lastname: formData.lastname,
         email: formData.email,
@@ -88,7 +88,7 @@ function Signup() {
   };
 
   return (
-    <div className="font-mono min-h-screen bg-gradient-to-r from-blue-400 to-purple-600 flex justify-center items-center">
+    <div className="font-mono min-h-screen bg-gradient-to-r from-gray-800 to-gray-900 flex justify-center items-center">
       <div className="container mx-auto">
         <div className="flex justify-center items-center h-screen px-6">
           <div className="w-full xl:w-3/4 lg:w-11/12 flex shadow-lg">
@@ -241,7 +241,7 @@ function Signup() {
 
                 <div className="text-center mb-4">
                   <button
-                    className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
                     Signup

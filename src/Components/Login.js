@@ -65,41 +65,43 @@ function Login() {
     }
   };
   return (
-    <div className="flex items-center min-h-screen p-4 bg-gradient-to-r from-blue-500 to-purple-600 lg:justify-center">
+    <div className="flex items-center min-h-screen p-4 bg-gradient-to-r from-gray-900 to-gray-700 lg:justify-center">
       <div className="flex flex-col overflow-hidden bg-white rounded-md shadow-xl md:flex-row md:flex-1 lg:max-w-screen-md">
-        <div className="p-4 py-6 text-white bg-gradient-to-b from-blue-700 to-blue-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+        <div className="p-4 py-6 text-white bg-gradient-to-b from-gray-800 to-gray-600 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
           <div className="my-3 text-4xl font-bold tracking-wider text-center">
-            <a href="\#">Welcome Back!</a>
+            <a href="\#" className="hover:text-teal-300">
+              Welcome Back!
+            </a>
           </div>
           <p className="mt-6 text-center text-gray-200">
             Log in to access your personalized dashboard and explore.
           </p>
           <p className="flex flex-col items-center justify-center mt-10 text-center">
             <span>Don't have an account?</span>
-            <Link to="/" className="underline hover:text-blue-300">
+            <Link to="/" className="underline hover:text-teal-300">
               Sign up here
             </Link>
           </p>
-          <p className="mt-6 text-sm text-center text-gray-300">
+          <p className="mt-6 text-sm text-center text-gray-400">
             Read our{" "}
-            <a href="\#" className="underline hover:text-gray-100">
+            <a href="\#" className="underline hover:text-teal-300">
               terms
             </a>{" "}
             and{" "}
-            <a href="\#" className="underline hover:text-gray-100">
+            <a href="\#" className="underline hover:text-teal-300">
               conditions
             </a>
           </p>
         </div>
         <div className="p-5 bg-white md:flex-1">
-          <h3 className="my-4 text-2xl font-semibold text-gray-700 text-center">
+          <h3 className="my-4 text-2xl font-semibold text-gray-800 text-center">
             Login to Your Account
           </h3>
           <form className="flex flex-col space-y-5" onSubmit={handleSubmit}>
             <div className="flex flex-col space-y-1">
               <label
                 htmlFor="email"
-                className="text-sm font-semibold text-gray-500"
+                className="text-sm font-semibold text-gray-600"
               >
                 Email Address
               </label>
@@ -107,7 +109,7 @@ function Login() {
                 type="email"
                 id="email"
                 autoFocus
-                className="px-4 py-2 transition duration-300 border border-gray-300 rounded-lg focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                className="px-4 py-2 transition duration-300 border border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-100"
                 placeholder="Enter your email"
                 name="email"
                 onChange={handleChange}
@@ -118,13 +120,13 @@ function Login() {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
-                  className="text-sm font-semibold text-gray-500"
+                  className="text-sm font-semibold text-gray-600"
                 >
                   Password
                 </label>
                 <a
                   href="\#"
-                  className="text-sm text-blue-500 hover:underline focus:text-blue-800"
+                  className="text-sm text-teal-500 hover:underline focus:text-teal-700"
                 >
                   Forgot Password?
                 </a>
@@ -132,7 +134,7 @@ function Login() {
               <input
                 type="password"
                 id="password"
-                className="px-4 py-2 transition duration-300 border border-gray-300 rounded-lg focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                className="px-4 py-2 transition duration-300 border border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-100"
                 placeholder="Enter your password"
                 name="password"
                 onChange={handleChange}
@@ -142,7 +144,7 @@ function Login() {
             <div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-200 transition duration-300"
+                className="w-full px-4 py-2 text-lg font-semibold text-white bg-teal-500 rounded-lg shadow-md hover:bg-teal-600 focus:outline-none focus:ring-4 focus:ring-teal-200 transition duration-300"
               >
                 Log in
               </button>
@@ -176,16 +178,16 @@ function Login() {
                 </a>
                 <a
                   href="/#"
-                  className="flex items-center justify-center px-4 py-2 space-x-2 transition duration-300 border border-blue-500 rounded-md group hover:bg-blue-500 focus:outline-none"
+                  className="flex items-center justify-center px-4 py-2 space-x-2 transition duration-300 border border-teal-500 rounded-md group hover:bg-teal-500 focus:outline-none"
                 >
                   <svg
-                    className="w-5 h-5 text-blue-500 group-hover:text-white"
+                    className="w-5 h-5 text-teal-500 group-hover:text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
                     <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743A11.65 11.65 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                   </svg>
-                  <span className="text-sm font-medium text-blue-500 group-hover:text-white">
+                  <span className="text-sm font-medium text-teal-500 group-hover:text-white">
                     Twitter
                   </span>
                 </a>
@@ -194,9 +196,7 @@ function Login() {
           </form>
         </div>
         {/* Display Success Popup on successful signup */}
-        {successMessage && (
-          <SuccessPopup message={successMessage} onClose={handleClosePopup} />
-        )}
+        {successMessage && <SuccessPopup message="Logged in successfully!" />}
       </div>
     </div>
   );
